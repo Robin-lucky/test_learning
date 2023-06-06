@@ -1,5 +1,21 @@
-package JavaThreeCharacteristics.JavaKeyWord;/**
-*@author Robin
-*@date 2023/6/5
-*/public class ThisAsParam {
+package JavaThreeCharacteristics.JavaKeyWord;
+
+/**
+ * @author Robin
+ * @date 2023/6/5
+ */
+public class ThisAsParam {
+    void method1(ThisAsParam p){
+        System.out.println(p);
+    }
+
+    void method2(){
+        method1(this);
+    }
+
+    public static void main(String[] args) {
+        ThisAsParam thisAsParam = new ThisAsParam();
+        System.out.println(thisAsParam);
+        thisAsParam.method2();
+    }
 }
